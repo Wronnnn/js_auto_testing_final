@@ -20,9 +20,7 @@
     "@wdio/mocha-framework": "^9.20.0",
     "@wdio/selenium-standalone-service": "^8.15.0",
     "@wdio/spec-reporter": "^9.20.0",
-    "msedgedriver": "^91.0.0",
     "stack-trace": "^0.0.10",
-    "wdio-edgedriver-service": "^3.0.3",
     "wdio-html-nice-reporter": "^8.1.7"
   },
   "dependencies": {

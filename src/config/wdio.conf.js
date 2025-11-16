@@ -49,76 +49,13 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    // capabilities: [{
-    //     browserName: 'firefox',
-    //     'moz:firefoxOptions': {
-    //         binary: '/usr/bin/firefox'
-    //     }
-    // }],
-    // moz: {
-    //     args: ['-profile', './tmp']
-    // },
 
-    // services: ['selenium-standalone'],
-
-    // services: [
-    //     ['edgedriver', {
-    //         autoInstall: false,
-    //         cacheDir: null
-    //     }]
-    // ],
-
-    // services: ['devtools'],
-
-    // seleniumArgs: {
-    //     drivers: {
-    //         edge: true
-    //     }
-    // },
-    //
-    // seleniumInstallArgs: {
-    //     drivers: {
-    //         edge: true
-    //     }
-    // },
-
-    // capabilities: [{
-    //     browserName: 'chrome', // musi być 'chrome', nawet dla Edge
-    //     'goog:chromeOptions': {
-    //         binary: '/usr/bin/microsoft-edge', // ścieżka do Edge na Linux
-    //         args: ['--disable-infobars', '--start-maximized']
-    //     }
-    // }],
-
-    // capabilities: [{
-    //     maxInstances: 1,
-    //     browserName: 'MicrosoftEdge',
-    //     'ms:edgeOptions': {
-    //         // bezwzględna ścieżka do binarki Edge
-    //         binary: '/opt/msedge', // <- zmień na swoją ścieżkę do Edge
-    //         args: [
-    //             '--start-maximized',
-    //             '--disable-infobars'
-    //         ]
-    //     }
-    // }],
-    //
-    // services: [
-    //     ['edgedriver', {
-    //         // jeśli chcesz ręcznie podać ścieżkę do msedgedriver
-    //         // edgeDriver path np.: '/usr/local/bin/msedgedriver'
-    //         edgedriverCustomPath: '/usr/local/bin/msedgedriver',
-    //         autoStart: true
-    //     }]
-    // ],
 
     capabilities: [{
         browserName: 'Firefox'
+    },{
+        browserName: 'MicrosoftEdge'
     }],
-
-    // services: [
-    //     'edgedriver'
-    // ],
 
     //
     // ===================
