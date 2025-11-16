@@ -10,26 +10,22 @@ export class LoginFormComponent extends BaseComponent{
     }
 
     async inputUsername(userName){
-        if(userName === null || userName === undefined){
-            await this.rootEl.$(this.usernameInputSelector).clearValue();
-        } else {
-            await this.rootEl.$(this.usernameInputSelector).setValue(userName);
-        }
+        this.checkIfVisible("Input username tag is not visible on the page", this.usernameInputSelector);
+        await this.rootEl.$(this.usernameInputSelector).setValue(userName);
     }
 
     async clearUsername(){
+        this.checkIfVisible("Input username tag is not visible on the page", this.usernameInputSelector);
         await this.rootEl.$(this.usernameInputSelector).clearValue();
     }
 
     async inputPassword(userPassword){
-        if(userPassword === null || userPassword === undefined){
-            await this.rootEl.$(this.passwordInputSelector).clearValue();
-        } else {
-            await this.rootEl.$(this.passwordInputSelector).setValue(userPassword);
-        }
+        this.checkIfVisible("Input password tag is not visible on the page", this.passwordInputSelector);
+        await this.rootEl.$(this.passwordInputSelector).setValue(userPassword);
     }
 
     async clearPassword(){
+        this.checkIfVisible("Input password tag is not visible on the page", this.passwordInputSelector);
         await this.rootEl.$(this.passwordInputSelector).clearValue();
     }
 

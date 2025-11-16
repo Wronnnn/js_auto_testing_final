@@ -9,10 +9,12 @@ export class LoginCredentialsComponent extends BaseComponent{
     }
 
     async fetchUserNames() {
+        this.checkIfVisible("Usernames container is not visible on the page", this.validUsernamesDivSelector);
         return (await $(this.validUsernamesDivSelector).getText()).split("\n").slice(1);
     }
 
     async fetchValidPassword(){
+        this.checkIfVisible("Valid password container is not visible on the page", this.validPasswordDivSelector);
         return (await $(this.validPasswordDivSelector).getText()).split("\n").slice(1).join();
     }
 }

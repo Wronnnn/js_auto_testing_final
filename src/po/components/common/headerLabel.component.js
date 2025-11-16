@@ -6,6 +6,7 @@ export class HeaderLabelComponent extends BaseComponent {
     }
 
     async fetchLabelTitle() {
-        return (await this.rootEl).getText();
+        this.checkIfVisible("Label title is not visible on the page")
+        return this.rootEl.getText();
     }
 }
