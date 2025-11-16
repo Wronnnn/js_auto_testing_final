@@ -1,5 +1,5 @@
 import { expect, browser } from "@wdio/globals";
-import { LoginPage, DashboardPage } from "../src/po/pages";
+import { LoginPage, DashboardPage } from "../po/pages";
 import logger from "@wdio/logger";
 
 const log = logger("test");
