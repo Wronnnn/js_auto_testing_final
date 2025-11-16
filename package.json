@@ -1,0 +1,33 @@
+{
+  "name": "epam_final",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wdio": "wdio run ./src/config/wdio.conf.js"
+  },
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/parser": "^7.28.5",
+    "@wdio/cli": "^9.20.0",
+    "@wdio/devtools-service": "^10.0.1",
+    "@wdio/firefox-profile-service": "^9.20.0",
+    "@wdio/local-runner": "^9.20.0",
+    "@wdio/mocha-framework": "^9.20.0",
+    "@wdio/selenium-standalone-service": "^8.15.0",
+    "@wdio/spec-reporter": "^9.20.0",
+    "msedgedriver": "^91.0.0",
+    "stack-trace": "^0.0.10",
+    "wdio-edgedriver-service": "^3.0.3",
+    "wdio-html-nice-reporter": "^8.1.7"
+  },
+  "dependencies": {
+    "@babel/traverse": "^7.28.5",
+    "@rpii/wdio-html-reporter": "^7.7.1",
+    "geckodriver": "^6.0.2"
+  }
+}
