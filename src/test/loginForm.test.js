@@ -25,8 +25,8 @@ describe('My Login application', () => {
         await loginPage.loginForm.inputUsername(username);
         await loginPage.loginForm.inputPassword(password);
         log.info('Clearing username and password');
-        await loginPage.loginForm.clearUsername();
         await loginPage.loginForm.clearPassword();
+        await loginPage.loginForm.clearUsername();
 
         await loginPage.loginForm.clickLoginButton();
 

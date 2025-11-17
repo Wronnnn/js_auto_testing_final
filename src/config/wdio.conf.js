@@ -50,6 +50,7 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
 
+    services: ['devtools'],
 
     capabilities: [{
         browserName: 'Firefox'

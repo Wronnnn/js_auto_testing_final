@@ -14,20 +14,48 @@ export class LoginFormComponent extends BaseComponent{
         await this.rootEl.$(this.usernameInputSelector).setValue(userName);
     }
 
-    async clearUsername(){
+    async clearUsername() {
         this.checkIfVisible("Input username tag is not visible on the page", this.usernameInputSelector);
-        await this.rootEl.$(this.usernameInputSelector).clearValue();
+
+        const el = await this.rootEl.$(this.usernameInputSelector);
+
+        await browser.execute((input) => {
+            const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
+                window.HTMLInputElement.prototype,
+                "value"
+            ).set;
+
+            nativeInputValueSetter.call(input, "");
+
+            input.dispatchEvent(new Event("input", { bubbles: true }));
+            input.dispatchEvent(new Event("change", { bubbles: true }));
+        }, el);
     }
+
 
     async inputPassword(userPassword){
         this.checkIfVisible("Input password tag is not visible on the page", this.passwordInputSelector);
         await this.rootEl.$(this.passwordInputSelector).setValue(userPassword);
     }
 
-    async clearPassword(){
+    async clearPassword() {
+        const el = await this.rootEl.$(this.passwordInputSelector);
+
         this.checkIfVisible("Input password tag is not visible on the page", this.passwordInputSelector);
-        await this.rootEl.$(this.passwordInputSelector).clearValue();
+
+        await browser.execute((input) => {
+            const nativeInputSetter = Object.getOwnPropertyDescriptor(
+                window.HTMLInputElement.prototype,
+                "value"
+            ).set;
+
+            nativeInputSetter.call(input, "");
+
+            input.dispatchEvent(new Event("input", { bubbles: true }));
+            input.dispatchEvent(new Event("change", { bubbles: true }));
+        }, el);
     }
+
 
     async clickLoginButton(){
         await this.rootEl.$(this.loginButtonSelector).click();
